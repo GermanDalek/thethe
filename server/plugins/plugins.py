@@ -65,7 +65,9 @@ class Plugins:
                 {
                     "name": plugin.name,
                     "description": plugin.description,
-                    "is_active": plugin.is_active,
+                    "api_key": plugin.api_key,
+                    "api_doc": plugin.api_doc,
+                    "is_active": plugin.is_active
                 }
             )
 

@@ -9,7 +9,8 @@
         color="primary"
         v-if="is_project_opened"
         class="ma-2 title"
-      >{{ get_opened_project.name }}</v-chip>
+        >{{ get_opened_project.name }}</v-chip
+      >
       <v-menu offset-y dark>
         <template v-slot:activator="{ on }">
           <v-avatar size="36" color="#666666" v-on="on">
@@ -28,7 +29,10 @@
           <v-divider></v-divider>
 
           <v-list-tile class="caption" @click.stop="show_apikeys_f(true)">
-            <api-keys :show="show_apikeys" @apikeys-closed="show_apikeys_f(false)"></api-keys>
+            <api-keys
+              :show="show_apikeys"
+              @apikeys-closed="show_apikeys_f(false)"
+            ></api-keys>
 
             <v-list-tile-avatar>
               <v-icon>call</v-icon>
@@ -40,7 +44,10 @@
 
           <v-divider></v-divider>
 
-          <v-list-tile class="caption" @click.stop="show_change_password_dialog(true)">
+          <v-list-tile
+            class="caption"
+            @click.stop="show_change_password_dialog(true)"
+          >
             <change-password-dialog
               :show="show_change_password"
               @change-password-closed="show_change_password_dialog(false)"
@@ -51,6 +58,17 @@
             </v-list-tile-avatar>
             <v-list-tile-content>
               <v-list-tile-title>Change password</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+
+          <v-divider></v-divider>
+
+          <v-list-tile href="https://thethe.e-paths.com" target="_blank">
+            <v-list-tile-avatar>
+              <v-icon>mdi-information-outline</v-icon>
+            </v-list-tile-avatar>
+            <v-list-tile-content>
+              <v-list-tile-title>About</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
 

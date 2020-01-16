@@ -8,8 +8,9 @@ from tasks.tasks import binaryedge_task
 # Which resources are this plugin able to work with
 RESOURCE_TARGET = [ResourceType.IPv4]
 
-# Plugin Metadata {a decription, if target is actively reached and name}
+# Plugin Metadata {a description, if target is actively reached and name}
 PLUGIN_DESCRIPTION = "List of recent events for the specified host, including details of exposed ports and services"
+PLUGIN_API_KEY = True
 PLUGIN_IS_ACTIVE = False
 PLUGIN_NAME = "binaryedge"
 PLUGIN_AUTOSTART = False
@@ -20,6 +21,8 @@ class Plugin:
     description = PLUGIN_DESCRIPTION
     is_active = PLUGIN_IS_ACTIVE
     name = PLUGIN_NAME
+    api_key = PLUGIN_API_KEY
+    api_doc = "https://docs.binaryedge.io/api-v2/"
     autostart = PLUGIN_AUTOSTART
 
     def __init__(self, resource, project_id):
